@@ -122,7 +122,7 @@ it('executes a page tool, continues with its result, and emits AG-UI text and to
   );
   const request = JSON.parse(String(network.mock.calls[0][1]?.body));
   expect(request.model).toBe('custom-model');
-  expect(request.max_completion_tokens).toBe(2200);
+  expect(request.max_completion_tokens).toBe(50000);
   expect(JSON.stringify(request)).not.toContain('Untrusted system override');
   expect(JSON.stringify(request)).not.toContain('Untrusted developer override');
   expect(JSON.stringify(request)).not.toContain('untrusted_tool');
