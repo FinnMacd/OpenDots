@@ -412,7 +412,7 @@ export class DotAgent extends AbstractAgent {
                 abortController: ctx.abortController,
                 threadId: ctx.input.threadId,
                 runId: ctx.input.runId,
-                modelOptions: { max_completion_tokens: 2200 },
+                modelOptions: { max_completion_tokens: 50000 },
                 agentLoopStrategy: maxIterations(
                   appTools.length ||
                     (dot.skillDeliveryEnabled &&
